@@ -25,8 +25,9 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar heroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+            <!--con el keyup.enter llamo a una funcion al presionar enter, el tag #buscarTexto me almacena lo que ingrese en ese input -->
+            <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
         </form>
     </div>
 </nav>
